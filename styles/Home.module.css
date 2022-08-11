@@ -127,3 +127,7 @@
     filter: invert(1);
   }
 }
+
+.contenedor-principal{
+  background-color: aquamarine;
+}
