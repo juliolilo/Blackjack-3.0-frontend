@@ -1,7 +1,21 @@
+import React, { useState, useEffect } from 'react';
+
+import * as ReactDOMClient from 'react-dom/client';
+
+
+
 export default function Boton(){
+    let tablero = React.createElement("h1", {className:"prueba"}, "First React Element");
+    const root = ReactDOMClient.createRoot(
+        document.querySelector('.prueba')
+      )
+      
+    
+    
+   
 
 
-    /*tablero = document.querySelector(".tablero");*/
+    
     function createCard(){
         
     }
@@ -12,12 +26,12 @@ export default function Boton(){
         rendido.classList.add("rendido");
         rendido.innerHTML = 
         `<div class="contenedor-img"></div>`
-        /*tablero.appendChild(rendido);*/
+        tablero.appendChild(rendido);
     }
 
     return(
         <div
-        onClick={rendirse}
+        onClick={ rendirse}
         className='robar opcion'>Robar        
         </div>
     );
