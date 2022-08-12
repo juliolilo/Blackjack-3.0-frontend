@@ -16,7 +16,7 @@ export default function Boton() {
       <button onClick={createElement}>Create Element</button>
     </div>
   );
+  const rootElement = document.getElementById("root");
+    ReactDOM.render(<Boton />, rootElement);
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Boton />, rootElement);

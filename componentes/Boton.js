@@ -1,38 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import * as ReactDOMClient from 'react-dom/client';
+export default function Boton() {
+  const rendirse = () => {
+    const parent = document.querySelector(".dealer-cards");
+    var newElement = document.createElement("img");
+    newElement.classList.add("card");
+    newElement.innerText = "New Element";
+    /*newElement.innerHTML = " <img className='card' src='cards/BACK.png'></img>";*/
+    //newElement.src = 'cards/BACK.png';
+    let number = getRandomInt(2,11);
+    newElement.src = "./cards/" + number + "-C.png";
+    parent.appendChild(newElement);
+  };
 
+  const handleClick = () => {
+    rendirse();
+    /*getRandomInt(3);*/
+  };
 
+  function getRandomInt(max,min) {
+    return Math.floor(Math.random() * (max - min) + min);
 
-export default function Boton(){
-    let tablero = React.createElement("h1", {className:"prueba"}, "First React Element");
-    const root = ReactDOMClient.createRoot(
-        document.querySelector('.prueba')
-      )
-      
-    
-    
-   
-
-
-    
-    function createCard(){
-        
-    }
-
-    const rendirse = () =>  {
-        console.log("hola");
-        var rendido = document.createElement("div");
-        rendido.classList.add("rendido");
-        rendido.innerHTML = 
-        `<div class="contenedor-img"></div>`
-        tablero.appendChild(rendido);
-    }
-
+  }
+  
+  
+  // expected output: 0, 1 or 2
+  
     return(
-        <div
-        onClick={ rendirse}
-        className='robar opcion'>Robar        
-        </div>
-    );
+    <div
+    onClick={handleClick}
+    
+    className='robar opcion'>Robar        
+    </div>
+);
+/*const rootElement = document.getElementById("root");
+  ReactDOM.render(<Boton />, rootElement);*/
+
 }
+    

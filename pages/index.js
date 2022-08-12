@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import {back} from '../public/cards/BACK.png';
 import Boton2 from '../componentes/Boton2';
+import Boton from '../componentes/Boton';
 import React, { useState, useEffect } from 'react';
 
 import * as ReactDOMClient from 'react-dom/client';
@@ -31,7 +32,9 @@ export default function Home() {
             <h2 className='h2-retro'>3. 0</h2>
 
           </div>
-          <Boton2/>
+          
+          
+
 
           
           
@@ -48,7 +51,7 @@ export default function Home() {
             
         </div>
         <div className='opciones'>
-          <div className='robar opcion'>Robar</div>
+        <Boton/>
           <div className='plantarse opcion'>Plantarse</div>
           <div className='rendirse opcion'>Rendirse</div>
 
