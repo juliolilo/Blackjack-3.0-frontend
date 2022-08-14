@@ -13,18 +13,33 @@
     
 }
 
+.contenedor{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  
+  
+}
+
 .contenedor-principal{
     /*background-color:black;*/
     background-image: url("../poker-table-background-green-color_313905-304.png");
     width: 100vw;
     height: 100vh;
-    margin-left: -32px;
     
+   
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.contenedor-rendido{
+  
+  /*filter: blur(6px);*/
+  
 }
 
 .tablero{
@@ -36,6 +51,8 @@
     flex-wrap: wrap;
     width: 100%;
     height: 90%;
+   
+    
 }
 
 .titulo{
@@ -121,6 +138,33 @@
     margin: 20px;
 }
 
+.rendido{
+  width: 500px;
+  height: 300px;
+  background-color:bisque;
+  position: absolute; 
+  left: 35%; 
+  top: 25%; 
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  
+}
+
+.h1-rendido{
+  font-size: 30px;
+  margin: 50px;
+}
+
+.texto-rendido{
+  font-size: 18px;
+  margin: 50px;
+}
 /* retro*/
 
 /*.contenedor-titulo{
